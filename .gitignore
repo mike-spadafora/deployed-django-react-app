@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/django-react-boilerplate-env/*
+django-react-boilerplate-env
