@@ -24,3 +24,5 @@ yarn-error.log*
 
 /django-react-boilerplate-env/*
 django-react-boilerplate-env
+
+backend/__pycache__
