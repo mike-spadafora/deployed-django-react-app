@@ -23,7 +23,7 @@ class App extends Component {
 
   refreshList = () => {
     axios
-      .get("/api/todos/")
+      .get("https://drt-boilerplate-mspadafora.herokuapp.com/api/todos/")
       .then((res) => this.setState({ todoList: res.data }))
       .catch((err) => console.log(err));
   };
@@ -37,18 +37,18 @@ class App extends Component {
 
     if (item.id) {
       axios
-        .put(`/api/todos/${item.id}/`, item)
+        .put(`https://drt-boilerplate-mspadafora.herokuapp.com/api/todos/${item.id}/`, item)
         .then((res) => this.refreshList());
       return;
     }
     axios
-      .post("/api/todos/", item)
+      .post("https://drt-boilerplate-mspadafora.herokuapp.com/api/todos/", item)
       .then((res) => this.refreshList());
   };
 
   handleDelete = (item) => {
     axios
-      .delete(`/api/todos/${item.id}/`)
+      .delete(`https://drt-boilerplate-mspadafora.herokuapp.com/api/todos/${item.id}/`)
       .then((res) => this.refreshList());
   };
 
